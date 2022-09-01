@@ -1,0 +1,1401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E94CFC3-06C5-49FC-A957-B967F25802AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Policem.UI</RootNamespace>
+    <AssemblyName>Poliçe Takip</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Projeler\Policem\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>tr-TR</TargetCulture>
+    <ProductName>Poliçe Takip</ProductName>
+    <PublisherName>Poliçe Takip</PublisherName>
+    <SuiteName>Poliçe Takip</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>C:\Projeler\Policem\Prerequisites</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\insurance_lock_password_protection_safety_secure_security_icon_0.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PoliceTakipYazilimi.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5A23A57299D210A4D0071F808BB08AE363DF8686</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Policem.UI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.1.Drawing, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.7.6.104\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.Mvc5.7.6.104\lib\net45\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.6.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Primitives.4.3.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSession.cs" />
+    <Compile Include="Core\OutlookTakvim.cs" />
+    <Compile Include="Core\Peripheral\PoliceScan\PdfSettings.cs" />
+    <Compile Include="Core\Peripheral\Scanner.cs" />
+    <Compile Include="DependencyResolution\CompositionRoot.cs" />
+    <Compile Include="DependencyResolution\Session.cs" />
+    <Compile Include="Forms\Base\XForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\XForm.Designer.cs">
+      <DependentUpon>XForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\XPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\XPopupForm.Designer.cs">
+      <DependentUpon>XPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDatabaseSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDatabaseSettings.Designer.cs">
+      <DependentUpon>FrmDatabaseSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHakkinda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHakkinda.Designer.cs">
+      <DependentUpon>FrmHakkinda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLisans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLisans.Designer.cs">
+      <DependentUpon>FrmLisans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPolicelerYeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPolicelerYeni.Designer.cs">
+      <DependentUpon>FrmPolicelerYeni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPoliceOnizleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPoliceOnizleme.Designer.cs">
+      <DependentUpon>FrmPoliceOnizleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPoliceTara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPoliceTara.Designer.cs">
+      <DependentUpon>FrmPoliceTara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAyarlar.Designer.cs">
+      <DependentUpon>FrmAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGelmeyenPoliceler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGelmeyenPoliceler.Designer.cs">
+      <DependentUpon>FrmGelmeyenPoliceler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMusteri.Designer.cs">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMusteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMusteriler.Designer.cs">
+      <DependentUpon>FrmMusteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPasifPoliceler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPasifPoliceler.Designer.cs">
+      <DependentUpon>FrmPasifPoliceler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPolice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPolice.Designer.cs">
+      <DependentUpon>FrmPolice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPoliceler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPoliceler.Designer.cs">
+      <DependentUpon>FrmPoliceler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSigortaci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSigortaci.Designer.cs">
+      <DependentUpon>FrmSigortaci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSQLList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSQLList.Designer.cs">
+      <DependentUpon>FrmSQLList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RibbonMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RibbonMainForm.Designer.cs">
+      <DependentUpon>RibbonMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Selection\FrmMusteriSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Selection\FrmMusteriSec.Designer.cs">
+      <DependentUpon>FrmMusteriSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Selection\FrmSigortaciSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Selection\FrmSigortaciSec.Designer.cs">
+      <DependentUpon>FrmSigortaciSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrgSettings.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rapor\ReportGelmeyen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rapor\ReportGelmeyen.Designer.cs">
+      <DependentUpon>ReportGelmeyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rapor\ReportPasifPoliceler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rapor\ReportPasifPoliceler.Designer.cs">
+      <DependentUpon>ReportPasifPoliceler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rapor\ReportPolicelerim.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rapor\ReportPolicelerim.Designer.cs">
+      <DependentUpon>ReportPolicelerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingleInstanceController.cs" />
+    <Compile Include="UserControls\NumberLatterTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\NumberLatterTextbox.Designer.cs">
+      <DependentUpon>NumberLatterTextbox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Rapor\ReportGelmeyen.resx">
+      <DependentUpon>ReportGelmeyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rapor\ReportPasifPoliceler.resx">
+      <DependentUpon>ReportPasifPoliceler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rapor\ReportPolicelerim.resx">
+      <DependentUpon>ReportPolicelerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Policem.Data.AktifPolicerim.datasource" />
+    <None Include="Properties\DataSources\Policem.Data.Firma.datasource" />
+    <None Include="Properties\DataSources\Policem.Data.GelmeyenPolice.datasource" />
+    <None Include="Properties\DataSources\Policem.Data.IEntity.datasource" />
+    <None Include="Properties\DataSources\Policem.Data.Police.datasource" />
+    <None Include="Properties\DataSources\Policem.Data.PoliceDosyaDetay.datasource" />
+    <None Include="Properties\DataSources\Policem.Data.Sigortaci.datasource" />
+    <None Include="Properties\DataSources\Policem.Data.StmpSettingsPolice.datasource" />
+    <None Include="Resources\teklif.png" />
+    <None Include="Resources\tokalasma6.jpg" />
+    <None Include="Resources\tokalasma.png" />
+    <EmbeddedResource Include="Forms\Base\XForm.resx">
+      <DependentUpon>XForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\XPopupForm.resx">
+      <DependentUpon>XPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDatabaseSettings.resx">
+      <DependentUpon>FrmDatabaseSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHakkinda.resx">
+      <DependentUpon>FrmHakkinda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLisans.resx">
+      <DependentUpon>FrmLisans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPolicelerYeni.resx">
+      <DependentUpon>FrmPolicelerYeni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPoliceOnizleme.resx">
+      <DependentUpon>FrmPoliceOnizleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPoliceTara.resx">
+      <DependentUpon>FrmPoliceTara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAyarlar.resx">
+      <DependentUpon>FrmAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGelmeyenPoliceler.resx">
+      <DependentUpon>FrmGelmeyenPoliceler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMusteri.resx">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMusteriler.resx">
+      <DependentUpon>FrmMusteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPasifPoliceler.resx">
+      <DependentUpon>FrmPasifPoliceler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPolice.resx">
+      <DependentUpon>FrmPolice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPoliceler.resx">
+      <DependentUpon>FrmPoliceler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSigortaci.resx">
+      <DependentUpon>FrmSigortaci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSQLList.resx">
+      <DependentUpon>FrmSQLList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RibbonMainForm.resx">
+      <DependentUpon>RibbonMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Selection\FrmMusteriSec.resx">
+      <DependentUpon>FrmMusteriSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Selection\FrmSigortaciSec.resx">
+      <DependentUpon>FrmSigortaciSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="Ayarlar.ini" />
+    <None Include="packages.config" />
+    <None Include="Policem.UI_TemporaryKey.pfx" />
+    <None Include="PoliceTakipYazilimi.pfx" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract_blue_technical_background_311541.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Policem.Core\Policem.Core.csproj">
+      <Project>{C9820A4C-D01B-4E7F-A682-B16CD3CBF25A}</Project>
+      <Name>Policem.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Policem.Data\Policem.Data.csproj">
+      <Project>{0612EC57-C68D-4D4A-B045-E10A9A327C80}</Project>
+      <Name>Policem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Policem.Services\Policem.Services.csproj">
+      <Project>{415060ad-6dc8-453e-942d-89f808dcac7d}</Project>
+      <Name>Policem.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Access.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add 32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address2 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Appeal 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assessors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attach 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attachment 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_add email 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_blue 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black pindown 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue085.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Building Permits.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculations 32x32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculations 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculations 32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar2 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capa 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAPA 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caption 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CareOf 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_green 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClearAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Code 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CodeCategory 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConciseIcon48x48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConciseIcon50x50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact2 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cost.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPRA 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custom 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomField 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeedBook 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 24x241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\District.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\district2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doc 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_new 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownArrow 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownArrow48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drawing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EMail 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmailAddress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorMsg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EventLog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explorer 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_violet_open 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Format 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garage 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\General 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group2 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Groups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_info 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_info 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_info 32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hostory 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\House 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INsert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left Arrow 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftArrow 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftArrow 32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOcation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man Taking Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Math 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Measure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Merge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Month 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Navigator 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No Sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-sign-x-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoBuildings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NonStdBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoPhotoAvailable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not_Verified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note 32x32_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note 32x32_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note 32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note 72x72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoteWithPLus 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open yellow 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Other.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OtherStructure 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outlook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Owner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parcel 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parcel2 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Permissions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Permissions 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Permit 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pin Down 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pin Up 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PivotTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Policy 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Policy2 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questionmark 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questionMark 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questmark 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo 24x241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveButton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right arrow 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow 32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow2 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Role 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Server 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setup 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setup2 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShortCuts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Situs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sketch 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sketch 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sketches.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sketches2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sketches3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sold Clip Art.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spellcheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Split.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Structure 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tag 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tax 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaxRate 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToDoItems 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Token.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOKEN 32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transfer 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash2 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash2 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treeview 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treeview 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Value 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Week 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizard 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizards 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X 24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance_lock_password_protection_safety_secure_security_icon_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance_lock_password_protection_safety_secure_security_icon_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance_lock_password_protection_safety_secure_security_icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance_lock_password_protection_safety_secure_security_icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance_lock_password_protection_safety_secure_security_icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance_lock_password_protection_safety_secure_security_icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance_lock_password_protection_safety_secure_security_icon_0.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
